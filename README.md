@@ -7,11 +7,10 @@ Although the traditional array pattern synthesis method can complete the synthes
 In this program, the corresponding control algorithm has been explored and researched. Also, I am **_the first one_** to use the above algorithm to simultaneously synthesize the main lobe and side lobes of the multi-main lobes target pattern in the uniform linear array and the non-uniform linear array with simultaneous constraints on the main lobe beam ripple and side lobe null steering.
 
 ## A2RC Algorithm
-/todo
-![image](https://user-images.githubusercontent.com/40145471/129460735-f518f42a-a6ba-4162-833f-206c8ebd6bc3.png)
+See [DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/code_A2RC](https://github.com/DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/tree/master/code_A2RC)
 
 ## WORD Algorithm
-/todo
+See [DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/code_WORD](https://github.com/DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/tree/master/code_WORD)
 
 ## Synthesised Pattern Obtained by A2RC and WORD Algorithm
 
