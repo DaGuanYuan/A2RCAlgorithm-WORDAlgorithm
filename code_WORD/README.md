@@ -2,6 +2,4 @@ Please read the paper published in IEEE TRANSACTIONS ON SIGNAL PROCESSING author
 
 https://ieeexplore.ieee.org/abstract/document/8239844?casa_token=E2VQGIUnprwAAAAA:IVXgljs5YR7-0YMI-YNWP8-E0LuSNLWE1apWZPheZ_8bZWOHtA2ZWpzE1xJvBwOKWy-Ha_G4
 
-[Xuejing Zhang_Pattern Synthesis for Arbitrary Arrays via Weight Vector Orthogonal Decomposition (2).pdf](https://github.com/DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/files/6987273/Xuejing.Zhang_Pattern.Synthesis.for.Arbitrary.Arrays.via.Weight.Vector.Orthogonal.Decomposition.2.pdf)
-
 Thanks again for their help to my undergraduate thesis！！!
