@@ -15,17 +15,21 @@ See [DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/code_WORD](https://github.com/DaGuan
 ##  Parameters in Pattern Synthesis
 
 ### Beamwidth
-The beamwidth of the antenna is the width of the mainlobe.
+The **_beamwidth_** of the antenna is the width of the mainlobe. Here we choose 3dB band as beamwidth. 
 
 ![image](https://user-images.githubusercontent.com/40145471/129480828-22d59f96-2801-44d3-8af3-2a412ea25491.png)
 
 ### Ripple
+Mainlobe **_ripple_** usually refers to the fluctuation of the normalized power at the mainlobe within a certain range. Considering that the array pattern is the output of the spatial filter, we define the mainlobe ripple of the array antenna pattern similar to the definition method of the ripple in the filter design.
+
 ![image](https://user-images.githubusercontent.com/40145471/129480834-c4632cb3-f9d2-4f4c-a9b0-8d001dbec645.png)
 
-### Sidelobe Level
+### Sidelobe Level and Nulls
+The pattern of all antennas has a maximum value and a minimum value. We call the minimum value(s) the **_null_**, as showed below. In the figure, The pattern is a beampattern of a ULA composed of 6 array elements adjacent to each other with a half-wavelength distance. Considering that in actual work, the scanning range of the mainlobe is between [-60°, 60°]. For this reason, when we adjust the null depth, we only consider the null within the range. In figure below, there are a total of 4 zero nulls, which are located on -40°, -20°, 20°, and 40° respectively. The absolute value that defines the difference between the minimum value of the null and the maximum value of the pattern is called the null depth, as showed below, the null depth at is about -68dB.
 
-### Nulls
 ![image](https://user-images.githubusercontent.com/40145471/129480837-2e893aed-c370-459a-afa2-99f00a9644ea.png)
+
+However, in fact, it is not convenient to directly control the null depth. Therefore, here we control the null depth by controlling the peak sidelobe levels (PSLs) of the pattern, which is usually called **_Sidelobe levels_**. Specifically, the control of the null depth can be achieved only by adjusting sidelobe levels' normalized power.
 
 ## Synthesised Pattern Obtained by A2RC and WORD Algorithm
 
