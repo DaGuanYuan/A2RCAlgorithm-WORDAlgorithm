@@ -14,7 +14,15 @@ See [DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/code_WORD](https://github.com/DaGuan
 
 ## Synthesised Pattern Obtained by A2RC and WORD Algorithm
 
+### Requirements
+- ULAs and non-ULAs
+- 2 or more Mainlobes
+- Ripple < 1dB
+- Sidelobe level < -25dB
+
 ### Initial Pattern for Uniform Linear Array(ULAs)
+
+
 
 ![image](https://user-images.githubusercontent.com/40145471/129460549-a58cbb2d-4f64-48a3-97a2-d2c0d492ce26.png)
 
@@ -57,12 +65,11 @@ Both mainlobe and sidelobe control:
 
 ![image](https://user-images.githubusercontent.com/40145471/129460532-acf24a79-1989-40d2-8a26-206d0013ace8.png)
 
-## Conclusion
-
 ## Future Works
 Although this project has done some exploration and research on the precise beam emission control algorithm of the array antenna pattern, and made some meagre contributions, there are still many issues worthy of in-depth discussion.
 
-- First of all, the multi-point control algorithm of the A2RC algorithm and the WORD algorithm are realized by iterating the single-point control algorithm. But in fact, in the iterative process of synthesizing **_BOTH_** the main lobe and the side lobes at the same time, it may happen that when the side lobes are synthesized, the main lobe changes and does not meet the index requirements; when the main lobe is synthesized, the side lobes may change The lobe will also change and not meet the index requirements, so the algorithm will enter an infinite loop that **_cannot be converged_**. The author believes that this is the inevitable drawback of obtaining the multi-point control model through single-point control iteration, because the energy of the received signal of the array is conserved. When one point is adjusted, it will inevitably affect other points. Therefore, the author believes that **the multi-point control model should be directly modeled theoretically in future research to avoid such an iterative infinite loop.**
+- First of all, the multi-point control algorithm of the A2RC algorithm and the WORD algorithm are realized by iterating the single-point control algorithm. But in fact, in the iterative process of synthesizing **_BOTH_** the main lobe and the side lobes at the same time, it may happen that when the side lobes are synthesized, the main lobe changes and does not meet the index requirements; when the main lobe is synthesized, the side lobes may change The lobe will also change and not meet the index requirements, so the algorithm will enter an infinite loop that **_cannot be converged_**. The author believes that this is the inevitable drawback of obtaining the multi-point control model through single-point control iteration, because the energy of the received signal of the array is conserved. When one point is adjusted, it will inevitably affect other points. Therefore, the author believes that **_the multi-point control model should be directly modeled theoretically in future research to avoid such an iterative infinite loop._**
 
-- In addition, in fact, the selection of key parameters and is not perfect in the A2RC algorithm and the WORD algorithm. The A2RC algorithm gives two criteria for the selection of parameters, namely formula (44) and formula (3-49) in the paper of A2RC. However, it is worth noting that formula (44) is based on global search, which will inevitably lead to a huge amount of calculation. Although formula (3-49) reduces the amount of calculation, it may lead to Severe distortion of the beam pattern. Similarly, the WORD algorithm is not very rigorous in the selection of parameters. The selection criterion (3-87) is very empirical, that is, the criterion cannot guarantee the establishment of formula (44). Therefore, the author feels that there is still a lot of mathematical work that can be done in the parameter selection criteria of the two algorithms.
+- In addition, the selection of key parameters and is not perfect in the A2RC algorithm and the WORD algorithm. The A2RC algorithm gives two criteria for the selection of parameters, namely formula (44) and formula (52) in paper A2RC. However, it is worth noting that formula (44) is based on global search, which will inevitably **_lead to a huge amount of calculation_**. Although formula (52) reduces the amount of calculation, it may lead to **_Severe distortion_** of the beam pattern. Similarly, the WORD algorithm is not very rigorous in the selection of parameters. The selection criterion (29) in paper WORD is very **_empirical_**, that is, the criterion cannot guarantee the establishment of formula (44). Hence, there is still a lot of mathematical work that can be done in the parameter selection criteria of the two algorithms.
 
+- Finally, the constraint on the normalized power in the WORD algorithm does not strictly follow the definition. That is to say, the normalized power is allowed to **_be greater than 1_** in the WORD algorithm, which is caused by the particularity of its iterative algorithm (not updated θ0). What is interesting is that if the normalized power is subject to certain constraints and limited to the range of 0 to 1, the convergence of the WORD algorithm will often be **_very poor_**. Therefore, how to **_update the iterative process variable_** of the WORD algorithm is still worthy of discussion and research.
