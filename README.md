@@ -21,13 +21,12 @@ See [DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/code_WORD](https://github.com/DaGuan
 - Sidelobe level < -25dB
 
 ### Initial Pattern for Uniform Linear Array(ULAs)
-
-
+Consider a ULA with 18-elements, and the spacing between adjacent elements is half wavelength. We assume that the two main lobes of the beampattern point at -45° and 45° respectively. Here, in order to achieve multiple main lobes, I adopt the following strategy: first make the beampattern point at 45°, and then adjust the normalized power value at -45° to 0dB through A2RC (or WORD algorithm).
 
 ![image](https://user-images.githubusercontent.com/40145471/129460549-a58cbb2d-4f64-48a3-97a2-d2c0d492ce26.png)
 
 #### A2RC Algorithm for Uniform Linear Array(ULAs)
-Mainlobe control:
+First of all, considering that the A2RC algorithm multi-point control model stipulates that the main lobe is synthesized first. Therefore, we apply the A2RC algorithm multi-point control algorithm to the mainlobe area, as shown in the figure below.
 
 ![image](https://user-images.githubusercontent.com/40145471/129460379-4a6d3823-4b9f-4ef5-a8d1-90044a00ca7a.png)
 
