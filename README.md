@@ -16,6 +16,7 @@ See [DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/code_WORD](https://github.com/DaGuan
 
 ### Beamwidth
 The beamwidth of the antenna is the width of the mainlobe.
+
 ![image](https://user-images.githubusercontent.com/40145471/129480828-22d59f96-2801-44d3-8af3-2a412ea25491.png)
 
 ### Ripple
