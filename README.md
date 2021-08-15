@@ -12,6 +12,17 @@ See [DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/code_A2RC](https://github.com/DaGuan
 ## WORD Algorithm
 See [DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/code_WORD](https://github.com/DaGuanYuan/A2RCAlgorithm-WORDAlgorithm/tree/master/code_WORD)
 
+##  Parameters in Pattern Synthesis
+
+### Beamwidth
+The beamwidth of the antenna is the width of the mainlobe.
+
+### Ripple
+
+### Nulls
+
+### Sidelobe Level
+
 ## Synthesised Pattern Obtained by A2RC and WORD Algorithm
 
 ### Requirements
@@ -25,7 +36,7 @@ Consider a ULA with 18-elements, and the spacing between adjacent elements is ha
 
 ![image](https://user-images.githubusercontent.com/40145471/129460549-a58cbb2d-4f64-48a3-97a2-d2c0d492ce26.png)
 
-#### A2RC Algorithm for Uniform Linear Array(ULAs)
+#### Synthesised Pattern Obtained by A2RC Algorithm for Uniform Linear Array(ULAs)
 First of all, considering that the A2RC algorithm multi-point control model stipulates that the main lobe is synthesized first. Therefore, we apply the A2RC algorithm multi-point control algorithm to the mainlobe area, as shown in the figure below.
 
 ![image](https://user-images.githubusercontent.com/40145471/129460379-4a6d3823-4b9f-4ef5-a8d1-90044a00ca7a.png)
@@ -35,7 +46,7 @@ Both mainlobe and sidelobe control:
 ![image](https://user-images.githubusercontent.com/40145471/129460385-05388527-ebe7-4c74-a52d-a484ecc13665.png)
 
 
-#### WORD Algorithm for Uniform Linear Array(ULAs)
+#### Synthesised Pattern Obtained by WORD Algorithm for Uniform Linear Array(ULAs)
 Mainlobe control:
 
 ![image](https://user-images.githubusercontent.com/40145471/129460395-7d40a190-7a3f-4c76-8144-7d72f58aca45.png)
@@ -46,7 +57,7 @@ Both mainlobe and sidelobe control:
 
 ### Initial Pattern for Non-Uniform Linear Array
 
-#### A2RC Algorithm for Non-Uniform Linear Array
+#### Synthesised Pattern Obtained by A2RC Algorithm for Non-Uniform Linear Array
 Mainlobe control:
 
 ![image](https://user-images.githubusercontent.com/40145471/129460518-a2042aee-0d54-4c9a-8d17-f87feda38bac.png)
@@ -55,7 +66,7 @@ Both mainlobe and sidelobe control:
 
 ![image](https://user-images.githubusercontent.com/40145471/129460522-b179744d-1c1c-467c-99aa-d9576e598b5b.png)
 
-#### WORD Algorithm for Non-Uniform Linear Array(ULAs)
+#### Synthesised Pattern Obtained by WORD Algorithm for Non-Uniform Linear Array
 Mainlobe control:
 
 ![image](https://user-images.githubusercontent.com/40145471/129460527-9a5ade33-fcca-44ef-90d9-8107ca6ad38c.png)
