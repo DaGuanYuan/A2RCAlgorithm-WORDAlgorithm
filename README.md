@@ -128,11 +128,11 @@ Considering that the WORD algorithm allows the normalized power value to exceed 
 
 |Angle of Arrival(°)|_L_(dB)|
 |-------------------|-------|
-|-48.60|-0.9372(_L_<sub>min</sub>)|
-|-41.06|-0.3967|
-|41.06|-0.5970|
-|48.60|-0.9372|
-|-45.04|0.5580(_L_<sub>max</sub>)|
+|-12.00|-0.5776|
+|-8.50|-0.9967(_L_<sub>min</sub>)|
+|28.36|-0.3171|
+|32.34|-0.5372|
+|29.84|-0.0280(_L_<sub>max</sub>)|
 
 ## Future Works
 Although this project has done some exploration and research on the precise beam emission control algorithm of the array antenna pattern, and made some meagre contributions, there are still many issues worthy of in-depth discussion.
