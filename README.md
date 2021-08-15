@@ -41,13 +41,13 @@ Consider a ULA with 18-elements, and the spacing between adjacent elements is ha
 ![image](https://user-images.githubusercontent.com/40145471/129460549-a58cbb2d-4f64-48a3-97a2-d2c0d492ce26.png)
 
 #### Synthesised Pattern Obtained by A2RC Algorithm for Uniform Linear Array(ULAs)
-Considering that the A2RC algorithm multi-point control model stipulates that the mainlobe should be synthesized first, we apply the A2RC algorithm multi-point control algorithm to the mainlobe area, as shown in the figure below.
+Considering that the A2RC algorithm multi-point control model stipulates that the mainlobe should be synthesized first, we apply the A2RC multi-point control algorithm to the mainlobe area, as shown in the figure below.
 
 ![image](https://user-images.githubusercontent.com/40145471/129460379-4a6d3823-4b9f-4ef5-a8d1-90044a00ca7a.png)
 
 As mentioned, the mainlobe width usually adopts the 3dB bandwidth of the original beam pattern. As shown in the figure above, Δθ<sup>3dB</sup> is about 17.2°, and the main lobe is located in [-48.60°, -41.06°] and [41.06°, 48.60°] (marked in the figure). It can be seen from the figure that the main lobe ripple is controlled within 1dB through repeated iterations of the A2RC algorithm.
 
-Subsequently, we control the side lobes based on the results of the mainlobe control. Considering that the mainlobe area may change when the side lobes are adjusted, we will continue to adapt both the mainlobes and sidelobes until meeting the final requirements.
+Subsequently, we control the sidelobes based on the results of the mainlobe control. Considering that the mainlobe area may change when the side lobes are adjusted, we will continue to adapt both the mainlobes and sidelobes until meeting the final requirements.
 
 ![image](https://user-images.githubusercontent.com/40145471/129460385-05388527-ebe7-4c74-a52d-a484ecc13665.png)
 
@@ -64,33 +64,75 @@ For the main lobe area, considering that the beam pattern of the main lobe area 
 
 
 #### Synthesised Pattern Obtained by WORD Algorithm for Uniform Linear Array(ULAs)
-Firstly, 
+Firstly, We adapt mainlobe using the WORD multi-point control algorithm.
 
 ![image](https://user-images.githubusercontent.com/40145471/129460395-7d40a190-7a3f-4c76-8144-7d72f58aca45.png)
 
-Both mainlobe and sidelobe control:
+Because of 3dB bandwidth, as showed above, the width of mainlobe area is about 17.2°, and the main lobe is located in [-48.60°, -41.06°] and [41.06°, 48.60°] (Same as A2RC algorithm because of same initial pattern). Mainlobe ripple is adjusted to less than 1dB by repeating the WORD algorithm.
+
+And then, sidelobes would be adapted iteratively until both the mainlobes and sidelobes meet the final requirements.
 
 ![image](https://user-images.githubusercontent.com/40145471/129460401-8a460223-8d3e-4ca1-9518-1bf1e2952afc.png)
 
+As we can see, all sidelobes are adjusted to less than -25dB and the boundaries of mainlobes are showed below:
+
+|Angle of Arrival(°)|_L_(dB)|
+|-------------------|-------|
+|-48.60|-0.9372(_L_<sub>min</sub>)|
+|-41.06|-0.3967|
+|41.06|-0.5970|
+|48.60|-0.9372|
+|-45.04|0.5580(_L_<sub>max</sub>)|
+
+It should be noticed that the WORD algorithm allows the normalized power value to exceed 1. Therefore, we should mark both the boundary value (the minimum value in the area) and the maximum value in the area.
+
 ### Initial Pattern for Non-Uniform Linear Array
+For convenience, we use ULA to design our non-uniform linear array. Consider a ULA with 21 elements, and the spacing between adjacent elements is half a wavelength. We randomly remove the 3<sup>rd</sup>, 7<sup>th</sup>, 9<sup>th</sup>, 13<sup>th</sup>, and 14<sup>th</sup> elements in the ULA to obtain a non-uniform linear array. Through the A2RC algorithm (or WORD algorithm), two main lobes of the nonlinear array beam pattern to -10° and 30° are synthesized respectively, as shown below.
+
+![image](https://user-images.githubusercontent.com/40145471/129484068-32090263-270a-4e2e-a8a5-80cb610f9fa5.png)
 
 #### Synthesised Pattern Obtained by A2RC Algorithm for Non-Uniform Linear Array
-Mainlobe control:
+Considering that the mainlobe should be synthesized first, here we use the A2RC multi-point control algorithm to the mainlobe area.
 
 ![image](https://user-images.githubusercontent.com/40145471/129460518-a2042aee-0d54-4c9a-8d17-f87feda38bac.png)
 
-Both mainlobe and sidelobe control:
+Since mainlobe width usually adopts the 3dB bandwidth of the original beam pattern, the mainlobe width, which is, Δθ<sup>3dB</sup> is about 7.5°. Also, the main lobe is located between [-12.00°, -8.50°] and [28.36°, 32.34°]. The main lobe ripple is adapted within 1dB through repeated iterations of the A2RC algorithm.
+
+Followed by mainlobe controlling results, we control the sidelobes using WORD algorithm repeatedly until both the mainlobe   and sidelobes meet the final requirements since the mainlobe area may change when the sidelobes are adjusted.
 
 ![image](https://user-images.githubusercontent.com/40145471/129460522-b179744d-1c1c-467c-99aa-d9576e598b5b.png)
 
+As showed above, the target requirements were finally successfully achieved. All the sidelobe peak normalized powers have been adjusted to -25dB, which means that the null depth must be greater than 25dB.
+
+Considering that the beampatterns of the mainlobe area are usually convex upwards, we calculate the normalized power of the mainlobe area boundaries, which is, _L_(dB).
+
+|Angle of Arrival(°)|_L_(dB)|
+|-------------------|-------|
+|-12.00|-0.9396(_L_<sub>min</sub>)|
+|-8.50|-0.4335|
+|28.36|-0.4474|
+|32.34|-0.2829|
+
+All values of _L_ are greater than -1dB, meaning the ripple, which is 0dB - _L_, would less than 1dB.
+
 #### Synthesised Pattern Obtained by WORD Algorithm for Non-Uniform Linear Array
-Mainlobe control:
+Next, we will use the WORD algorithm to integrate the initial non-uniform linear array multi-mainlobe beampattern into a pattern that meets the ## Requirements. We first use the WORD algorithm to control the main lobe area of the beam pattern (the result is shown in the figure below). The main lobe area and 3dB bandwidth of the beam pattern are the same as the results of the A2RC algorithm, and it can be seen intuitively that the main lobe ripple is synthesized below 1dB.
 
 ![image](https://user-images.githubusercontent.com/40145471/129460527-9a5ade33-fcca-44ef-90d9-8107ca6ad38c.png)
 
-Both mainlobe and sidelobe control:
+After the mainlobe control is completed, we start to control the sidelobe area. Similarly, we need to constantly adjust the mainlobe and sidelobes to counter the changes that occur in other areas outside the adjustment area. As shown in the figure below, after continuous adjustment, all the nulls have been systhesized to less than -25dB.
 
 ![image](https://user-images.githubusercontent.com/40145471/129460532-acf24a79-1989-40d2-8a26-206d0013ace8.png)
+
+Considering that the WORD algorithm allows the normalized power value to exceed 1, therefore, for the result of the mainlobe area, we also need to consider the part above 0dB. In particular, we mark both the boundary value (the minimum value in the area) and the maximum value in the area,
+
+|Angle of Arrival(°)|_L_(dB)|
+|-------------------|-------|
+|-48.60|-0.9372(_L_<sub>min</sub>)|
+|-41.06|-0.3967|
+|41.06|-0.5970|
+|48.60|-0.9372|
+|-45.04|0.5580(_L_<sub>max</sub>)|
 
 ## Future Works
 Although this project has done some exploration and research on the precise beam emission control algorithm of the array antenna pattern, and made some meagre contributions, there are still many issues worthy of in-depth discussion.
