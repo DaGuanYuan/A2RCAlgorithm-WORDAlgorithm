@@ -60,7 +60,7 @@ After repeated iterations, the target requirements were finally successfully ach
 For the main lobe area, considering that the beam pattern of the main lobe area are usually convex upwards, in particular, we calibrated the value of the boundary of the mainlobe area, that is, _L_(dB), the minimum value in the area, which meets the requirements.
 
 |Angle of Arrival(°)|_L_(dB)|
-|-------------------|-------|
+|:-------------------:|:-------:|
 |-48.60|-0.9566|
 |-41.06|-0.9862|
 |41.06|-0.8468|
@@ -81,7 +81,7 @@ And then, sidelobes would be adapted iteratively until both the mainlobes and si
 As we can see, all sidelobes are adjusted to less than -25dB and the boundaries of mainlobes are showed below:
 
 |Angle of Arrival(°)|_L_(dB)|
-|-------------------|-------|
+|:-------------------:|:-------:|
 |-48.60|-0.9372(_L_<sub>min</sub>)|
 |-41.06|-0.3967|
 |41.06|-0.5970|
@@ -111,13 +111,13 @@ As showed above, the target requirements were finally successfully achieved. All
 Considering that the beampatterns of the mainlobe area are usually convex upwards, we calculate the normalized power of the mainlobe area boundaries, which is, _L_(dB).
 
 |Angle of Arrival(°)|_L_(dB)|
-|-------------------|-------|
+|:-------------------:|:-------:|
 |-12.00|-0.9396(_L_<sub>min</sub>)|
 |-8.50|-0.4335|
 |28.36|-0.4474|
 |32.34|-0.2829|
 
-All values of _L_ are greater than -1dB, meaning the ripple, which is 0dB - _L_, would less than 1dB.
+All values of _L_ are greater than -1dB, meaning the ripple, which is `0dB - L(dB)`, would less than 1dB.
 
 #### Synthesised Pattern Obtained by WORD Algorithm for Non-Uniform Linear Array
 Next, we will use the WORD algorithm to integrate the initial non-uniform linear array multi-mainlobe beampattern into a pattern that meets the ## Requirements. We first use the WORD algorithm to control the main lobe area of the beam pattern (the result is shown in the figure below). The main lobe area and 3dB bandwidth of the beam pattern are the same as the results of the A2RC algorithm, and it can be seen intuitively that the main lobe ripple is synthesized below 1dB.
@@ -131,7 +131,7 @@ After the mainlobe control is completed, we start to control the sidelobe area. 
 Considering that the WORD algorithm allows the normalized power value to exceed 1, therefore, for the result of the mainlobe area, we also need to consider the part above 0dB. In particular, we mark both the boundary value (the minimum value in the area) and the maximum value in the area,
 
 |Angle of Arrival(°)|_L_(dB)|
-|-------------------|-------|
+|:-------------------:|:-------:|
 |-12.00|-0.5776|
 |-8.50|-0.9967(_L_<sub>min</sub>)|
 |28.36|-0.3171|
