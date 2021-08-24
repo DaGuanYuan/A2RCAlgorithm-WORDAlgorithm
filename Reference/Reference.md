@@ -1,0 +1,7 @@
+- [A2RC: An Accurate Array Response Control Algorithm for Pattern Synthesis (Xuejing Zhang, et al., 2017)](https://ieeexplore.ieee.org/abstract/document/7809182)
+- [Beampattern Synthesis for Linear and Planar Arrays With Antenna Selection by Convex Optimization (Siew Eng Nai, et al., 2010)](https://ieeexplore.ieee.org/abstract/document/5582247)
+- [Near-Field Pattern Synthesis for Sparse Focusing Antenna Arrays Based on Bayesian Compressive Sensing and Convex Optimization (Zi Xuan Huang, et al., 2018)](https://ieeexplore.ieee.org/document/8421241)
+- [Pattern Synthesis for Arbitrary Arrays Using an Adaptive Array Method (Philip Yuanping Zhou and Mary Ann Ingram, 1999)](https://ieeexplore.ieee.org/document/774142)
+- [Fast Array Response Adjustment With Phase-Only Constraint: A Geometric Approach (Xuejing Zhang, et al., 2019)](https://ieeexplore.ieee.org/document/8742792)
+- [Pattern Synthesis for Arbitrary Arrays via Weight Vector Orthogonal Decomposition (Xuejing Zhang, et al., 2018)](https://ieeexplore.ieee.org/document/8239844)
+- [Phased-Array Transmission for Secure mmWave Wireless Communication via Polygon Construction (Xuejing Zhang, et al., 2019)](https://ieeexplore.ieee.org/document/8855017)
